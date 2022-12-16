@@ -4,11 +4,15 @@
   "version": "1.0.0",
   "description": "If you want to see Rick everickwhere, you've come to the right place!",
   "icons": {
-    "128": "icon-128x128.png"
+    "128": "assets/logo128.png"
   },
   "content_scripts": [{
     "js": ["content.js"],
     "matches": ["<all_urls>"],
     "run_at": "document_idle"
+  }],
+  "web_accessible_resources": [{
+    "matches": ["<all_urls>"],
+    "resources": ["assets/*"]
   }]
 }
